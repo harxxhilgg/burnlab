@@ -1,5 +1,4 @@
 import { Image } from 'expo-image';
-import { SymbolView } from 'expo-symbols';
 import React from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -11,6 +10,7 @@ import { Collapsible } from '@/components/ui/collapsible';
 import { WebBadge } from '@/components/web-badge';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
+import { SymbolView } from 'expo-symbols';
 
 export default function TabTwoScreen() {
   const safeAreaInsets = useSafeAreaInsets();
