@@ -1,6 +1,6 @@
 function requiredEnv(value: string | undefined, name: string): string {
   if (!value) {
-    console.error(`❌ Missing environment variable: ${name}`);
+    console.error(`Missing environment variable: ${name}`);
     throw new Error(`Missing environment variable: ${name}`);
   }
   return value;
