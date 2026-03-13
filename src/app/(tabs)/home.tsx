@@ -32,7 +32,7 @@ export default function HomeScreen() {
           </ThemedText>
         </ThemedView>
       </SafeAreaView>
-    </ThemedView>
+    </ThemedView >
   );
 }
 
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: 'center',
+    gap: Spacing.two,
   },
   title: {
     paddingVertical: Spacing.two,

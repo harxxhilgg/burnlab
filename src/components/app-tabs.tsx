@@ -17,7 +17,7 @@ export default function AppTabs() {
       <NativeTabs.Trigger name="home">
         <NativeTabs.Trigger.Label hidden>Home</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          sf={{ default: 'house', selected: 'house.fill' }}
+          sf={{ default: "house", selected: "house.fill" }}
           md="home"
         />
       </NativeTabs.Trigger>
@@ -25,7 +25,7 @@ export default function AppTabs() {
       <NativeTabs.Trigger name="explore">
         <NativeTabs.Trigger.Label hidden>Explore</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          sf={{ default: 'globe.central.south.asia', selected: 'globe.central.south.asia.fill' }}
+          sf={{ default: "globe.central.south.asia", selected: "globe.central.south.asia.fill" }}
           md="globe"
         />
       </NativeTabs.Trigger>
@@ -33,8 +33,16 @@ export default function AppTabs() {
       <NativeTabs.Trigger name="profile">
         <NativeTabs.Trigger.Label hidden>Profile</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
-          sf={{ default: 'person', selected: 'person.fill' }}
+          sf={{ default: "person", selected: "person.fill" }}
           md="person"
+        />
+      </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="experiment" role="search">
+        <NativeTabs.Trigger.Label hidden>Experiment</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          sf={{ default: "testtube.2", selected: "testtube.2" }}
+          md="science"
         />
       </NativeTabs.Trigger>
     </NativeTabs>

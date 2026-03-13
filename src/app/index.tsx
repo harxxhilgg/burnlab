@@ -2,13 +2,14 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
-import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Landing() {
   const theme = useTheme();
+  const router = useRouter();
 
   return (
     <ThemedView style={[styles.screen, { backgroundColor: theme.background }]}>
@@ -16,11 +17,16 @@ export default function Landing() {
         <ThemedView style={styles.container}>
           <ThemedText type="title" style={styles.title}>Landing Page</ThemedText>
 
-          <Link href="/login" replace asChild>
-            <ThemedText>
-              Go to Login
-            </ThemedText>
-          </Link>
+          <TouchableOpacity
+            onPress={() => router.replace("/login")}
+            style={[styles.button, {
+              backgroundColor: theme.backgroundElement,
+              borderColor: theme.backgroundSelected,
+            }]}
+            activeOpacity={0.6}
+          >
+            <ThemedText type="default">Go to login</ThemedText>
+          </TouchableOpacity>
         </ThemedView>
       </SafeAreaView>
     </ThemedView>
@@ -41,10 +47,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.four,
     paddingBottom: BottomTabInset,
   },
-  container: {
-    alignItems: 'center',
-  },
   title: {
     fontSize: 28,
+  },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  button: {
+    height: 50,
+    width: 150,
+    borderRadius: 99,
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 2,
   },
 });
